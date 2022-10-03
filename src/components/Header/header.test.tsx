@@ -4,7 +4,7 @@ import Header from './index';
 
 describe('<Header />', () => {
   it('should render', () => {
-    renderTheme(<Header theme={'light'} />);
+    renderTheme(<Header />);
     expect(screen.getByRole('heading')).toBeInTheDocument;
   });
 });

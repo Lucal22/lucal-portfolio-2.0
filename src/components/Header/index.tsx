@@ -1,13 +1,10 @@
 import React from 'react';
 import * as Styled from './styles';
-import P from 'prop-types';
 
-export default function Header({ theme = 'light' }) {
+export default function Header() {
   return (
     <Styled.Container>
-      <h1>{theme ? 'Olá mundo' : ''}</h1>
+      <h1>{'Olá mundo'}</h1>
     </Styled.Container>
   );
 }
-
-Header.propTypes = { theme: P.node.isRequired };
