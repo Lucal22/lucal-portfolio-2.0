@@ -37,6 +37,18 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <link rel="manifest" href="/manifest.json" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

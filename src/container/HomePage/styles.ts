@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    color: red;
+    color: ${theme.colors.brownColor};
+    background-color: ${theme.colors.grayColor};
   `}
 `;
