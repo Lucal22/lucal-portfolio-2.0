@@ -39,7 +39,7 @@ export const theme = {
   screen: {
     size: {
       xSmall: '360px',
-      small: '481px',
+      small: '480px',
       medium: '780px',
       large: '1280px',
     },

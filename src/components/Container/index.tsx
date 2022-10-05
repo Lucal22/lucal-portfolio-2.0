@@ -6,8 +6,14 @@ export type ContainerProps = ContainerStyleProps & {
   children: React.ReactNode;
 };
 
-export default function Container({ children, background }: ContainerProps) {
+export default function Container({
+  children,
+  background,
+  height,
+}: ContainerProps) {
   return (
-    <Styled.Container background={background}>{children}</Styled.Container>
+    <Styled.Container height={height} background={background}>
+      {children}
+    </Styled.Container>
   );
 }

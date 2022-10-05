@@ -1,13 +1,14 @@
 import React from 'react';
 import Container from '../../components/Container';
+import Header from '../../components/Header';
 import * as Styled from './styles';
 
 export default function HomePage() {
   return (
-    <Styled.Container>
-      <Container background="gray">
+    <Styled.Home>
+      <Container background="gray" height={'full'}>
         <h1>Portfolio</h1>
       </Container>
-    </Styled.Container>
+    </Styled.Home>
   );
 }

@@ -1,20 +1,31 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
 export type ContainerStyleProps = {
-  background: 'white' | 'gray';
+  background: 'white' | 'gray' | 'transparent';
+  height: 'full' | '100';
+};
+
+const backGround = {
+  white: (theme: DefaultTheme) => css`
+    background-color: ${theme.background.white};
+    color: ${theme.colors.blackColor};
+  `,
+  gray: (theme: DefaultTheme) => css`
+    background-color: ${theme.background.gray};
+    color: ${theme.colors.whiteColor};
+  `,
+  transparent: (theme: DefaultTheme) => css`
+    background-color: transparent;
+    color: ${theme.colors.blackColor};
+  `,
 };
 
 export const Container = styled.div<ContainerStyleProps>`
-  ${({ theme, background }) => css`
+  ${({ theme, background, height }) => css`
     margin: 0 auto;
-    min-height: 100vh;
+    padding: 0 1rem;
+    min-height: ${height == 'full' ? '100vh' : '100%'};
     width: ${theme.screen.size.xSmall};
-    background-color: ${background == 'white'
-      ? theme.background.white
-      : theme.background.gray};
-    color: ${background == 'white'
-      ? theme.colors.blackColor
-      : theme.colors.whiteColor};
     @media (min-width: ${theme.screen.size.small}) {
       width: ${theme.screen.size.small};
     }
@@ -24,5 +35,6 @@ export const Container = styled.div<ContainerStyleProps>`
     @media (min-width: ${theme.screen.size.large}) {
       width: ${theme.screen.size.large};
     }
+    ${backGround[background](theme)}
   `}
 `;

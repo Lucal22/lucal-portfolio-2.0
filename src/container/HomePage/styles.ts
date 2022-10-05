@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Home = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.brownColor};
+    padding-top: 5rem;
     background-color: ${theme.colors.grayColor};
   `}
 `;
