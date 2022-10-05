@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 
 export type ContainerStyleProps = {
-  background: 'white' | 'gray' | 'transparent';
+  background?: 'white' | 'gray';
   height: 'full' | '100';
 };
 
@@ -13,10 +13,6 @@ const backGround = {
   gray: (theme: DefaultTheme) => css`
     background-color: ${theme.background.gray};
     color: ${theme.colors.whiteColor};
-  `,
-  transparent: (theme: DefaultTheme) => css`
-    background-color: transparent;
-    color: ${theme.colors.blackColor};
   `,
 };
 
@@ -35,6 +31,6 @@ export const Container = styled.div<ContainerStyleProps>`
     @media (min-width: ${theme.screen.size.large}) {
       width: ${theme.screen.size.large};
     }
-    ${backGround[background](theme)}
+    ${background ? backGround[background](theme) : null}
   `}
 `;

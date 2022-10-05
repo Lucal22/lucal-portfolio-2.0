@@ -47,5 +47,6 @@ export const theme = {
   background: {
     white: '#ffffff',
     gray: '#6b7688',
+    transparent: 'rgba(255, 255, 255, 0.25)',
   },
 };

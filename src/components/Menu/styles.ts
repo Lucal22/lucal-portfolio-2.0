@@ -7,21 +7,25 @@ type MenuProps = {
 export const Button = styled.button`
   ${({ theme }) => css`
     position: absolute;
-    left: 0;
+    left: 5%;
     top: 25%;
-    display: none;
     border: none;
     cursor: pointer;
-    background-color: transparent;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${theme.background.gray};
     color: ${theme.colors.whiteColor};
-
     svg {
       width: 4rem;
       height: 3.4rem;
     }
 
-    @media (max-width: ${theme.screen.size.medium}) {
-      display: block;
+    @media (min-width: ${theme.screen.size.medium}) {
+      display: none;
     }
   `}
 `;
@@ -29,13 +33,14 @@ export const Button = styled.button`
 export const Menu = styled.div<MenuProps>`
   ${({ theme, open }) => css`
     display: ${open ? 'block' : 'none'};
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 200px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%;
     padding: 1rem;
-    height: 600px;
-    background-color: ${theme.background.gray};
+    height: 100vh;
+    background-color: ${theme.background.white};
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 
     @media (min-width: ${theme.screen.size.medium}) {
       display: none;
@@ -51,16 +56,16 @@ export const Nav = styled.nav`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    color: ${theme.colors.blackColor};
+    color: ${theme.colors.grayColor};
+    font-size: ${theme.fonts.size.medium};
     a:hover {
-      color: ${theme.colors.blueColor};
+      color: ${theme.colors.secondary};
     }
   `}
 `;
 
 export const MenuItens = styled.div`
   ${({ theme }) => css`
-    border-top: 1px solid ${theme.colors.blackColor};
     padding: 1rem;
   `}
 `;

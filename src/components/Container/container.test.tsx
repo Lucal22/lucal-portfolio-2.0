@@ -22,4 +22,14 @@ describe('<Container />', () => {
     expect(screen.getByRole('heading')).toBeInTheDocument;
     expect(container).toMatchSnapshot();
   });
+
+  it('should render with background gray', () => {
+    const { container } = renderTheme(
+      <Container height={'100'}>
+        <h1>Olá mundo</h1>
+      </Container>,
+    );
+    expect(screen.getByRole('heading')).toBeInTheDocument;
+    expect(container).toMatchSnapshot();
+  });
 });

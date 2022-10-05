@@ -10,7 +10,7 @@ export type HeaderProps = {
 export default function Header() {
   return (
     <Styled.Header>
-      <Container background={'transparent'} height={'100'}>
+      <Container height={'100'}>
         <Styled.Nav>
           <Styled.List>
             <p>item 1</p>
