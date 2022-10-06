@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <Styled.Home>
       <Container background="gray" height={'full'}>
-        <h1>Portfolio</h1>
+        <Styled.Content></Styled.Content>
       </Container>
     </Styled.Home>
   );

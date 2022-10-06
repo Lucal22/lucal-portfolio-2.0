@@ -18,6 +18,7 @@ const backGround = {
 
 export const Container = styled.div<ContainerStyleProps>`
   ${({ theme, background, height }) => css`
+    display: block;
     margin: 0 auto;
     padding: 0 1rem;
     min-height: ${height == 'full' ? '100vh' : '100%'};

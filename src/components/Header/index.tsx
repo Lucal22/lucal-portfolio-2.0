@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../Container';
 import Menu from '../Menu';
 import Nav from '../Nav';
 import * as Styled from './styles';

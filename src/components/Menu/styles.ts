@@ -34,8 +34,9 @@ export const Menu = styled.div<MenuProps>`
   ${({ theme, open }) => css`
     display: ${open ? 'block' : 'none'};
     position: fixed;
-    right: 0;
     top: 0;
+    right: 0;
+    z-index: 5;
     width: 50%;
     padding: 1rem;
     height: 100vh;
@@ -65,7 +66,5 @@ export const Nav = styled.nav`
 `;
 
 export const MenuItens = styled.div`
-  ${({ theme }) => css`
-    padding: 1rem;
-  `}
+  padding: 1rem;
 `;

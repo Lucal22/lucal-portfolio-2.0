@@ -1,10 +1,7 @@
 import { List, X } from 'phosphor-react';
 import React, { useState } from 'react';
 import * as Styled from './styles';
-import { motion } from 'framer-motion';
 import list from '../Header/mock';
-
-import Image from 'next/image';
 import Links from '../Links';
 
 export type MenuProps = {
@@ -15,20 +12,24 @@ export default function Menu() {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <Styled.Button
-        aria-label="Abre e fecha Menu"
-        onClick={() => {
-          setMenu(!menu);
-        }}
-      >
-        {!menu ? <List /> : <X />}
+      <Styled.Button>
+        {!menu ? (
+          <List
+            aria-label="Abre Menu"
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          />
+        ) : (
+          <X
+            aria-label="Fecha Menu"
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          />
+        )}
       </Styled.Button>
-      <Styled.Menu
-        open={menu}
-        as={motion.div}
-        whileInView={{ x: [200, 0] }}
-        transition={{ duration: 0.85, ease: 'easeOut' }}
-      >
+      <Styled.Menu open={menu}>
         <Styled.Nav>
           {list.map((item) => {
             return (
