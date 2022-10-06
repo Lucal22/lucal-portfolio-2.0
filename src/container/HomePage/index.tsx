@@ -1,6 +1,5 @@
 import React from 'react';
 import Container from '../../components/Container';
-import Header from '../../components/Header';
 import * as Styled from './styles';
 
 export default function HomePage() {

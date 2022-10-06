@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../Container';
 import Menu from '../Menu';
+import Nav from '../Nav';
 import * as Styled from './styles';
 
 export type HeaderProps = {
@@ -10,16 +11,7 @@ export type HeaderProps = {
 export default function Header() {
   return (
     <Styled.Header>
-      <Container height={'100'}>
-        <Styled.Nav>
-          <Styled.List>
-            <p>item 1</p>
-            <p>item 1</p>
-            <p>item 1</p>
-            <p>item 1</p>
-          </Styled.List>
-        </Styled.Nav>
-      </Container>
+      <Nav />
       <Menu />
     </Styled.Header>
   );

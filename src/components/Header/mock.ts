@@ -1,25 +1,25 @@
 const list = [
   {
     id: 1,
-    name: 'Início',
+    name: 'HOME',
     target: false,
     path: '/',
   },
   {
     id: 2,
-    name: 'Sobre',
+    name: 'SOBRE',
     target: false,
     path: 'about',
   },
   {
     id: 3,
-    name: 'Projetos',
+    name: 'PROJETOS',
     target: false,
     path: 'projects',
   },
   {
     id: 4,
-    name: 'Contato',
+    name: 'CONTATO',
     target: false,
     path: 'contact',
   },

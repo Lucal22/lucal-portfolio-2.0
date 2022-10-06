@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
 import { renderTheme } from '../../utils/renderTheme';
-import Header from './index';
+import Nav from './index';
 
-describe('<Header />', () => {
+describe('<Nav />', () => {
   it('should render', () => {
-    const header = renderTheme(<Header />);
-    expect(header).toMatchSnapshot;
+    renderTheme(<Nav />);
+    expect(screen.getByRole('heading')).toBeInTheDocument;
   });
 });

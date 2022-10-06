@@ -13,6 +13,15 @@ describe('<Links />', () => {
     expect(screen.getByRole('link')).toHaveAttribute('target', '_self');
   });
 
+  it('should render on same tab', () => {
+    const links = renderTheme(
+      <Links link="/" newTab={false}>
+        Teste
+      </Links>,
+    );
+    expect(links).toMatchSnapshot;
+  });
+
   it('should render on a different tab', () => {
     renderTheme(
       <Links link="/" newTab={true}>
