@@ -1,4 +1,3 @@
-import bgImg from './images/bgIMG.png';
-import bgWhite from './images/bgWhite.png';
+import luis from './images/luis.jpg';
 
-export default { bgImg, bgWhite };
+export default { luis };

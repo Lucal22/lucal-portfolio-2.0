@@ -15,7 +15,6 @@ ${({ theme }) => css`
 
   html,
   body {
-    line-height: 1.5;
     font-family: ${theme.fonts.style.defaultFont};
   }
 
