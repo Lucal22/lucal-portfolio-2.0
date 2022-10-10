@@ -2,6 +2,7 @@
 
 exports[`<Container /> should render with background gray 1`] = `
 .c0 {
+  display: block;
   margin: 0 auto;
   padding: 0 1rem;
   min-height: 100%;
@@ -42,6 +43,7 @@ exports[`<Container /> should render with background gray 1`] = `
 
 exports[`<Container /> should render with background gray 2`] = `
 .c0 {
+  display: block;
   margin: 0 auto;
   padding: 0 1rem;
   min-height: 100%;
@@ -80,6 +82,7 @@ exports[`<Container /> should render with background gray 2`] = `
 
 exports[`<Container /> should render with background white 1`] = `
 .c0 {
+  display: block;
   margin: 0 auto;
   padding: 0 1rem;
   min-height: 100vh;

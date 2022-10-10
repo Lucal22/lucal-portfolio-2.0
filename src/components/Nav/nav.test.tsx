@@ -5,6 +5,10 @@ import Nav from './index';
 describe('<Nav />', () => {
   it('should render', () => {
     renderTheme(<Nav />);
-    expect(screen.getByRole('heading')).toBeInTheDocument;
+  });
+
+  it('should render', () => {
+    const nav = renderTheme(<Nav />);
+    expect(nav).toMatchSnapshot;
   });
 });
