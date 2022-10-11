@@ -13,9 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  ${({ theme }) => css`
-    padding-top: 9rem;
-  `}
+  padding-top: 9rem;
 `;
 
 export const Buttons = styled.div`
@@ -37,8 +35,28 @@ export const Button = styled.button<AboutStyleProps>`
   `}
 `;
 
-export const Description = styled.div`
+export const Description = styled.div``;
+
+export const Paragraph = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.blackColor};
+    display: flex;
+    padding-top: ${theme.spaces.large};
+    gap: ${theme.spaces.small};
+    align-items: center;
+
+    p {
+      font-size: ${theme.fonts.size.small};
+      font-weight: 400;
+      text-align: justify;
+
+      span {
+        color: ${theme.colors.blackColor};
+        background: ${theme.colors.greenColor};
+      }
+    }
+    img {
+      min-width: 6.7rem;
+    }
   `}
 `;
