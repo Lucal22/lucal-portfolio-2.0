@@ -13,7 +13,12 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding-top: 9rem;
+  ${({ theme }) => css`
+    padding-top: 9rem;
+    @media (min-width: ${theme.screen.size.large}) {
+      padding-top: 15rem;
+    } ;
+  `}
 `;
 
 export const Buttons = styled.div`
@@ -32,10 +37,20 @@ export const Button = styled.button<AboutStyleProps>`
     font-weight: 500;
     padding: 0.5rem;
     color: ${theme.colors.blackColor};
+    @media (min-width: ${theme.screen.size.large}) {
+      font-size: ${theme.fonts.size.big};
+    } ;
   `}
 `;
 
-export const Description = styled.div``;
+export const Description = styled.div`
+  ${({ theme }) => css`
+    @media (min-width: ${theme.screen.size.large}) {
+      width: 50%;
+      margin: 0 auto;
+    } ;
+  `}
+`;
 
 export const Paragraph = styled.div`
   ${({ theme }) => css`
@@ -54,20 +69,39 @@ export const Paragraph = styled.div`
         color: ${theme.colors.blackColor};
         background: ${theme.colors.greenColor};
       }
+      @media (min-width: ${theme.screen.size.medium}) {
+        font-size: ${theme.fonts.size.medium};
+      }
     }
     img {
       min-width: 6.7rem;
+    }
+    @media (min-width: ${theme.screen.size.large}) {
+      p {
+        font-size: ${theme.fonts.size.big};
+      }
+      img {
+        min-width: 15rem;
+      }
     }
   `}
 `;
 
 export const Tech = styled.div`
-  display: grid;
-  grid-template-columns: 4rem 4rem;
-  gap: 2rem;
-  img {
-    min-width: 4rem;
-  }
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: 4rem 4rem;
+    gap: 2rem;
+    img {
+      min-width: 4rem;
+    }
+    @media (min-width: ${theme.screen.size.large}) {
+      img {
+        min-width: 6rem;
+      }
+      grid-template-columns: 6rem 6rem;
+    }
+  `}
 `;
 
 export const DefaultText = styled.h1`
