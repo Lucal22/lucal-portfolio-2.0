@@ -8,12 +8,26 @@ export type ImageProps = {
   alt: string;
   width?: string | number;
   height?: string | number;
+  layout?: 'fill';
 };
 
-export default function Images({ link, src, alt, width, height }: ImageProps) {
+export default function Images({
+  link,
+  src,
+  alt,
+  width,
+  height,
+  layout,
+}: ImageProps) {
   return (
     <Links link={link}>
-      <Image src={src} alt={alt} width={width} height={height} />
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        layout={layout}
+      />
     </Links>
   );
 }
