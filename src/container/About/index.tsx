@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Container from '../../components/Container';
-import images from '../../assets/index';
-import Images from '../../components/Images';
 import * as Styled from './styles';
+import AboutMe from './components/AboutMe';
+import Graduation from './components/Graduation';
+import Tech from './components/Tech';
+import { motion } from 'framer-motion';
 
 export type AboutProps = Styled.AboutStyleProps;
 
@@ -47,55 +49,20 @@ export default function About() {
               {'Tecnologias'}
             </Styled.Button>
           </Styled.Buttons>
-          <Styled.Description>
-            {about ? (
-              <>
-                <Styled.Paragraph>
-                  <p>
-                    Meu nome é Luís Carlos, tenho 26 anos e um grande interesse
-                    por <span>tecnologia.</span>
-                  </p>
-                  <Images
-                    src={images.luis}
-                    alt={'Foto de Luís Carlos'}
-                    width={150}
-                    height={150}
-                  />
-                </Styled.Paragraph>
-                <Styled.Paragraph>
-                  <Images
-                    src={images.minas}
-                    alt={'Mapa de Minas Gerais'}
-                    width={150}
-                    height={150}
-                  />
-                  <p>
-                    Sou de Conselheiro Lafaiete, Minas Gerais e no momento estou
-                    a procura de uma oportunidade como{' '}
-                    <span>desenvolvedor web.</span>
-                  </p>
-                </Styled.Paragraph>
-                <Styled.Paragraph>
-                  <p>
-                    Alguns dos meus <span>hobbies</span> são assistir séries e
-                    filmes, ir ao cinema, jogos online e pelo último ano está
-                    sendo <span>programar.</span>
-                  </p>
-                  <Images
-                    src={images.horde}
-                    alt={'Símbolo da horda - World of Warcraft'}
-                    width={150}
-                    height={150}
-                  />
-                </Styled.Paragraph>
-              </>
-            ) : null}
-            {graduation ? 'graduation' : null}
-            {tech ? 'tech' : null}
+          <Styled.Description
+            as={motion.div}
+            animate={{ y: about || graduation || tech ? [50, 0] : [0, 0] }}
+            transition={{ duration: 0.85, ease: 'easeOut' }}
+          >
+            {about ? <AboutMe /> : null}
+            {graduation ? <Graduation /> : null}
+            {tech ? <Tech /> : null}
 
-            {!about && !graduation && !tech
-              ? 'Clique acima para saber mais sobre mim'
-              : null}
+            {!about && !graduation && !tech ? (
+              <Styled.DefaultText>
+                Clique acima para saber mais sobre mim
+              </Styled.DefaultText>
+            ) : null}
           </Styled.Description>
         </Styled.Content>
       </Container>

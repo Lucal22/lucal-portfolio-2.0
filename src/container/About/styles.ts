@@ -60,3 +60,20 @@ export const Paragraph = styled.div`
     }
   `}
 `;
+
+export const Tech = styled.div`
+  display: grid;
+  grid-template-columns: 4rem 4rem;
+  gap: 2rem;
+  img {
+    min-width: 4rem;
+  }
+`;
+
+export const DefaultText = styled.h1`
+  ${({ theme }) => css`
+    color: ${theme.colors.grayColor};
+    padding-top: 10rem;
+    text-align: center;
+  `}
+`;
