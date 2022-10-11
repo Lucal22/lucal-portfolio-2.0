@@ -33,21 +33,26 @@ export const Button = styled.button<AboutStyleProps>`
     border: 1.5px solid black;
     border-radius: 25px;
     background-color: ${click ? theme.background.gray : theme.background.white};
+    box-shadow: ${click ? '0px 4px 3px -2px rgba(0, 0, 0, 0.75)' : 'none'};
     font-size: ${theme.fonts.size.small};
     font-weight: 500;
     padding: 0.5rem;
     color: ${theme.colors.blackColor};
     @media (min-width: ${theme.screen.size.large}) {
       font-size: ${theme.fonts.size.big};
+      &:hover {
+        box-shadow: 0px 4px 3px -2px rgba(0, 0, 0, 0.75);
+      }
     } ;
   `}
 `;
 
 export const Description = styled.div`
   ${({ theme }) => css`
-    @media (min-width: ${theme.screen.size.large}) {
+    @media (min-width: ${theme.screen.size.medium}) {
       width: 50%;
       margin: 0 auto;
+      padding-top: 3rem;
     } ;
   `}
 `;
@@ -69,13 +74,20 @@ export const Paragraph = styled.div`
         color: ${theme.colors.blackColor};
         background: ${theme.colors.greenColor};
       }
-      @media (min-width: ${theme.screen.size.medium}) {
-        font-size: ${theme.fonts.size.medium};
-      }
     }
     img {
       min-width: 6.7rem;
     }
+
+    @media (min-width: ${theme.screen.size.medium}) {
+      p {
+        font-size: ${theme.fonts.size.medium};
+      }
+      img {
+        min-width: 10rem;
+      }
+    }
+
     @media (min-width: ${theme.screen.size.large}) {
       p {
         font-size: ${theme.fonts.size.big};
