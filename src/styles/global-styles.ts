@@ -13,7 +13,6 @@ ${({ theme }) => css`
     scroll-behavior: smooth;
   }
 
-  html,
   body {
     font-family: ${theme.fonts.style.defaultFont};
   }

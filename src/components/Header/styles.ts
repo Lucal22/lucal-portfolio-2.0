@@ -10,7 +10,6 @@ export const Header = styled.header`
     background-color: ${theme.background.transparent};
     color: ${theme.colors.blackColor};
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     box-shadow: 0px 4px 3px -2px rgba(0, 0, 0, 0.75);
   `}
 `;

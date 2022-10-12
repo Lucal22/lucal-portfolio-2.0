@@ -1,42 +1,44 @@
 import { CaretLeft, CaretRight } from 'phosphor-react';
-import React from 'react';
+import React, { useState } from 'react';
+import images from '../../assets/index';
 import Images from '../Images';
 import * as Styled from './styles';
 
-export type CarouselProps = {
-  children: React.ReactNode;
-};
+const array = [
+  {
+    src: images.nations,
+    alt: 'Beach',
+  },
+  {
+    src: images.portfolio,
+    alt: 'Soccer',
+  },
+  {
+    src: images.blog,
+    alt: 'Animal',
+  },
+];
 
 export default function Carousel() {
+  const [slide, setSlide] = useState(0);
   return (
     <Styled.Container>
       <Styled.Galery>
-        <Styled.image
-          src={'https://source.unsplash.com/random/250x250/?beach'}
-          alt={'Beach'}
-        />
-        <Styled.image
-          src={'https://source.unsplash.com/random/250x250/?soccer'}
-          alt={'soccer'}
-        />
-
-        <Styled.image
-          src={'https://source.unsplash.com/random/250x250/?animal'}
-          alt={'animal'}
-        />
-
-        <Styled.image
-          src={'https://source.unsplash.com/random/250x250/?canada'}
-          alt={'canada'}
-        />
-
-        <Styled.image
-          src={'https://source.unsplash.com/random/250x250/?forest'}
-          alt={'forest'}
-        />
+        <Styled.image>
+          <Images src={array[slide].src} alt={array[slide].alt} />
+        </Styled.image>
       </Styled.Galery>
-      <Styled.CaretLeft as={CaretLeft} size={32} />
-      <Styled.CaretRight as={CaretRight} size={32} />
+      <Styled.CaretLeft
+        hide={slide - 1 == -1 ? true : false}
+        onClick={() => setSlide(slide - 1)}
+      >
+        <CaretLeft size={32} />
+      </Styled.CaretLeft>
+      <Styled.CaretRight
+        onClick={() => setSlide(slide == array.length - 1 ? 0 : slide + 1)}
+      >
+        <CaretRight size={32} />
+      </Styled.CaretRight>
     </Styled.Container>
   );
 }
