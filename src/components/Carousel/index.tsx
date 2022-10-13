@@ -1,23 +1,8 @@
 import { CaretLeft, CaretRight } from 'phosphor-react';
 import React, { useState } from 'react';
-import images from '../../assets/index';
 import Images from '../Images';
 import * as Styled from './styles';
-
-const array = [
-  {
-    src: images.nations,
-    alt: 'Beach',
-  },
-  {
-    src: images.portfolio,
-    alt: 'Soccer',
-  },
-  {
-    src: images.blog,
-    alt: 'Animal',
-  },
-];
+import projects from './mock';
 
 export default function Carousel() {
   const [slide, setSlide] = useState(0);
@@ -25,20 +10,37 @@ export default function Carousel() {
     <Styled.Container>
       <Styled.Galery>
         <Styled.image>
-          <Images src={array[slide].src} alt={array[slide].alt} />
+          <Images src={projects[slide].src} alt={projects[slide].alt} />
         </Styled.image>
+        <Styled.CaretLeft
+          onClick={() =>
+            setSlide(slide === 0 ? projects.length - 1 : slide - 1)
+          }
+        >
+          <CaretLeft size={32} />
+        </Styled.CaretLeft>
+        <Styled.CaretRight
+          onClick={() => setSlide(slide == projects.length - 1 ? 0 : slide + 1)}
+        >
+          <CaretRight size={32} />
+        </Styled.CaretRight>
       </Styled.Galery>
-      <Styled.CaretLeft
-        hide={slide - 1 == -1 ? true : false}
-        onClick={() => setSlide(slide - 1)}
-      >
-        <CaretLeft size={32} />
-      </Styled.CaretLeft>
-      <Styled.CaretRight
-        onClick={() => setSlide(slide == array.length - 1 ? 0 : slide + 1)}
-      >
-        <CaretRight size={32} />
-      </Styled.CaretRight>
+
+      <Styled.Title>
+        <h1>Back end blog com strapi</h1>
+      </Styled.Title>
+      <Styled.Line></Styled.Line>
+      <Styled.Description>
+        <h2>Descrição:</h2>
+        <p>
+          <span>Stack:</span> xdxdxdxd
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus in
+          rem, alias quidem sit harum incidunt sed optio, est sunt culpa rerum
+          modi similique tempore molestias atque blanditiis itaque animi?
+        </p>
+      </Styled.Description>
     </Styled.Container>
   );
 }
