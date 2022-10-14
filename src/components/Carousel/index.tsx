@@ -37,15 +37,21 @@ export default function Carousel() {
         <Styled.Topics>
           Stack: <span> {projects[slide].stack}</span>
         </Styled.Topics>
+        {projects[slide].libs ? (
+          <Styled.Topics>
+            Bibliotecas auxiliares: <span> {projects[slide].libs}</span>
+          </Styled.Topics>
+        ) : null}
+
         <Styled.Topics>
           Links:{' '}
-          <Links link="https://www.globo.com" newTab={true}>
+          <Links link={projects[slide].github} newTab={true}>
             Github
           </Links>{' '}
           {projects[slide].website ? (
             <>
               {'|| '}
-              <Links link="https://www.globo.com" newTab={true}>
+              <Links link={projects[slide].website} newTab={true}>
                 Website
               </Links>
             </>
