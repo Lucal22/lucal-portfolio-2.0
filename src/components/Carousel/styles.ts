@@ -104,27 +104,36 @@ export const Title = styled.div`
   `}
 `;
 
-export const Description = styled.div`
-  ${({ theme }) => css`
-    //background-color: ${theme.background.gray};
-    padding-top: 1rem;
-    color: ${theme.colors.grayColor};
-    font-size: ${theme.fonts.size.small};
-    font-weight: 400;
-    h2 {
-      font-size: ${theme.fonts.size.medium};
-      font-weight: 400;
-      color: black;
-    }
-    span {
-      color: ${theme.colors.blackColor};
-    }
-  `}
-`;
-
 export const Line = styled.div`
   margin-top: 0.5rem;
   width: 100%;
   background-color: black;
   height: 0.1rem;
+`;
+
+export const Description = styled.div`
+  ${({ theme }) => css`
+    padding-top: 1rem;
+    padding-bottom: 15rem;
+    h2 {
+      font-size: ${theme.fonts.size.medium};
+      font-weight: 400;
+      color: black;
+    }
+  `}
+`;
+
+export const Topics = styled.p`
+  ${({ theme }) => css`
+    padding-top: 1rem;
+    font-size: ${theme.fonts.size.small};
+    font-weight: 400;
+    color: ${theme.colors.blackColor};
+    span {
+      color: ${theme.colors.grayColor};
+    }
+    a {
+      color: ${theme.colors.blueColor};
+    }
+  `}
 `;

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Images from '../Images';
 import * as Styled from './styles';
 import projects from './mock';
+import Links from '../Links';
 
 export default function Carousel() {
   const [slide, setSlide] = useState(0);
@@ -27,19 +28,29 @@ export default function Carousel() {
       </Styled.Galery>
 
       <Styled.Title>
-        <h1>Back end blog com strapi</h1>
+        <h1>{projects[slide].title}</h1>
       </Styled.Title>
       <Styled.Line></Styled.Line>
       <Styled.Description>
         <h2>Descrição:</h2>
-        <p>
-          <span>Stack:</span> xdxdxdxd
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus in
-          rem, alias quidem sit harum incidunt sed optio, est sunt culpa rerum
-          modi similique tempore molestias atque blanditiis itaque animi?
-        </p>
+        <Styled.Topics>{projects[slide].description}</Styled.Topics>
+        <Styled.Topics>
+          Stack: <span> {projects[slide].stack}</span>
+        </Styled.Topics>
+        <Styled.Topics>
+          Links:{' '}
+          <Links link="https://www.globo.com" newTab={true}>
+            Github
+          </Links>{' '}
+          {projects[slide].website ? (
+            <>
+              {'|| '}
+              <Links link="https://www.globo.com" newTab={true}>
+                Website
+              </Links>
+            </>
+          ) : null}{' '}
+        </Styled.Topics>
       </Styled.Description>
     </Styled.Container>
   );
