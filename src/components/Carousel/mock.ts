@@ -13,25 +13,59 @@ const projects = [
     website: 'https://vercel.com/lucal22/portfolio-lucal',
   },
   {
+    src: images.keeper,
+    alt: 'Imagem do keeper app',
+    title: 'Keeper app',
+    description:
+      'O objetivo deste projeto foi criar uma lista de tarefas utilizando reactjs. Foi feito no ambiente de desenvolvimento do site CodeSandbox seguindo o curso da Dr. Angela Yu chamado "The Complete 2022 Web Development Bootcamp".',
+    stack: 'React.js e CSS',
+    libs: '',
+    github: 'https://github.com/Lucal22/blog-strapi-api',
+    website: '',
+  },
+  {
     src: images.nations,
     alt: 'Imagem do site jogo das nações',
     title: 'Jogo das nações',
     description:
       'Este projeto é uma page responsiva feita em react.js com o intuito de desenvolver um jogo de aposta onde é possível tentar adivinhar qual a nação do dia.',
     stack: 'React.js, React Redux e SCSS',
-    libs: '',
+    libs: 'Headlessui, Framer motion e Phosphor icons',
     github: 'https://github.com/Lucal22/nations-game',
     website: 'https://nations-game.vercel.app/',
   },
   {
+    src: images.widget,
+    alt: 'Imagem widget',
+    title: 'Widget - NLW 8',
+    description:
+      'Um widget feito para envio de feedbacks utilizando typescript e nodejs, desenvolvido durante a semana NLW Return da Rocketseat.',
+    stack:
+      'Frontend(web): React.js, Typescript, Axios e Tailwind CSS. (Mobile): React Native, Styled Components. Backend: Node.js e Typescript  ',
+    libs: 'Frontend: Headlessui, Axios, Phosphor icons. Backend: Express, CORS, Prisma, Nodemailer',
+    github: 'https://github.com/Lucal22/blog-strapi-api',
+    website: 'https://widget-project-nlw-8.vercel.app/',
+  },
+  {
     src: images.blog,
     alt: 'Imagem do site Lucal Thoughts',
-    title: 'Blog pessoal',
+    title: 'Blog pessoal - Frontend',
     description:
       'Projeto desenvolvido utilizando Typescript e Next.js que funciona como frontend de um blog',
     stack: 'Nexts.js, Typescript, Tailwind Css, GraphQL',
+    libs: 'Phosphor icons',
+    github: 'https://github.com/Lucal22/lucal-thoughts',
+    website: 'https://lucal-thoughts.vercel.app/',
+  },
+  {
+    src: images.strapipage,
+    alt: 'Imagem do strapi',
+    title: 'Blog pessoal - Backend',
+    description:
+      'Backend feito utilizando strapi para ser consumido pelo frontend do blog.',
+    stack: 'Strapi',
     libs: '',
-    github: 'https://',
+    github: 'https://github.com/Lucal22/blog-strapi-api',
     website: '',
   },
 ];
