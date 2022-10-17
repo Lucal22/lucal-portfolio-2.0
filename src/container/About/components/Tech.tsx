@@ -43,9 +43,9 @@ export default function Tech() {
 
         <p>
           E em 2022 tenho estudado e desenvolvido projetos utilizando frameworks
-          como <span>React.js e Next.js</span> para o frontend e Node.js para
-          backend além de procurar outras alternativas para estilização como{' '}
-          <span>Tailwind CSS, Styled Components e SASS.</span>
+          como <span>React.js, Next.js e Typescript</span> para o frontend e
+          Node.js para backend além de procurar outras alternativas para
+          estilização como <span>Tailwind CSS, Styled Components e SASS.</span>
         </p>
       </Styled.Paragraph>
     </>
