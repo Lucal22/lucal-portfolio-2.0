@@ -19,9 +19,9 @@ const projects = [
     description:
       'O objetivo deste projeto foi criar uma lista de tarefas utilizando reactjs. Foi feito no ambiente de desenvolvimento do site CodeSandbox seguindo o curso da Dr. Angela Yu chamado "The Complete 2022 Web Development Bootcamp".',
     stack: 'React.js e CSS',
-    libs: '',
+    libs: 'Material UI',
     github: 'https://github.com/Lucal22/blog-strapi-api',
-    website: '',
+    website: 'https://codesandbox.io/s/github/Lucal22/Keeper-app',
   },
   {
     src: images.nations,
@@ -51,7 +51,7 @@ const projects = [
     alt: 'Imagem do site Lucal Thoughts',
     title: 'Blog pessoal - Frontend',
     description:
-      'Projeto desenvolvido utilizando Typescript e Next.js que funciona como frontend de um blog',
+      'Projeto desenvolvido utilizando Typescript e Next.js que funciona como frontend de um blog.',
     stack: 'Nexts.js, Typescript, Tailwind Css, GraphQL',
     libs: 'Phosphor icons',
     github: 'https://github.com/Lucal22/lucal-thoughts',

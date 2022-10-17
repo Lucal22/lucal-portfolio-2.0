@@ -55,7 +55,7 @@ export default function Carousel() {
                 Website
               </Links>
             </>
-          ) : null}{' '}
+          ) : null}
         </Styled.Topics>
       </Styled.Description>
     </Styled.Container>
