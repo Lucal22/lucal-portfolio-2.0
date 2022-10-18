@@ -24,18 +24,18 @@ export const Galery = styled.div`
 export const image = styled.div`
   ${({ theme }) => css`
     width: 25rem;
-    height: 18.75rem;
+    height: 100%;
     @media (min-width: ${theme.screen.size.small}) {
       width: 34rem;
-      height: 25.5rem;
+      height: 100%;
     }
     @media (min-width: ${theme.screen.size.medium}) {
       width: 40rem;
-      height: 30rem;
+      height: 100%;
     }
     @media (min-width: ${theme.screen.size.large}) {
       width: 80rem;
-      height: 60rem;
+      height: 100%;
     } ;
   `}
 `;
@@ -97,9 +97,13 @@ export const Title = styled.div`
     padding-top: 0.5rem;
     color: ${theme.colors.blackColor};
     h1 {
-      font-size: ${theme.fonts.size.big};
+      font-size: ${theme.fonts.size.medium};
       font-weight: 400;
       text-align: center;
+
+      @media (min-width: ${theme.screen.size.medium}) {
+        font-size: ${theme.fonts.size.big};
+      }
     }
   `}
 `;
