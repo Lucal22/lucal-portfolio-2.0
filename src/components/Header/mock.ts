@@ -17,12 +17,6 @@ const list = [
     target: false,
     path: 'projects',
   },
-  {
-    id: 4,
-    name: 'CONTATO',
-    target: false,
-    path: 'contact',
-  },
 ];
 
 export default list;
