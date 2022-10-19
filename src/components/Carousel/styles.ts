@@ -118,7 +118,6 @@ export const Line = styled.div`
 export const Description = styled.div`
   ${({ theme }) => css`
     padding-top: 1rem;
-    padding-bottom: 15rem;
     h2 {
       font-size: ${theme.fonts.size.medium};
       font-weight: 400;
