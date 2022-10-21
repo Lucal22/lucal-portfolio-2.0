@@ -12,19 +12,19 @@ export default function Menu() {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <Styled.Button>
+      <Styled.Button aria-label="Abre/Fecha Menu">
         {!menu ? (
           <List
             aria-label="Abre Menu"
             onClick={() => {
-              setMenu(!menu);
+              setMenu(true);
             }}
           />
         ) : (
           <X
             aria-label="Fecha Menu"
             onClick={() => {
-              setMenu(!menu);
+              setMenu(false);
             }}
           />
         )}

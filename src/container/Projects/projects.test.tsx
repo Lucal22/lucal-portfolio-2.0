@@ -1,0 +1,11 @@
+import { screen } from '@testing-library/react';
+import { renderTheme } from '../../utils/renderTheme';
+import Projects from './index';
+
+describe('<Projects />', () => {
+  it('should render', () => {
+    const projects = renderTheme(<Projects />);
+    expect(screen.getByRole('heading')).toBeInTheDocument;
+    expect(projects).toMatchSnapshot;
+  });
+});

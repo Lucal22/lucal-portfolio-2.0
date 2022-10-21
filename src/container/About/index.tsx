@@ -19,6 +19,7 @@ export default function About() {
         <Styled.Content>
           <Styled.Buttons>
             <Styled.Button
+              aria-label="Abre Sobre mim"
               onClick={() => {
                 setAbout(!about);
                 setGraduation(false);
@@ -29,6 +30,7 @@ export default function About() {
               {'Sobre mim'}
             </Styled.Button>
             <Styled.Button
+              aria-label="Abre Graduação"
               onClick={() => {
                 setGraduation(!graduation);
                 setAbout(false);
@@ -39,6 +41,7 @@ export default function About() {
               {'Graduação'}
             </Styled.Button>
             <Styled.Button
+              aria-label="Abre Tecnologias"
               onClick={() => {
                 setTech(!tech);
                 setAbout(false);
