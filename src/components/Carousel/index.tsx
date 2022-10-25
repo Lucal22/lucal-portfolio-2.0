@@ -14,6 +14,7 @@ export default function Carousel() {
           <Images src={projects[slide].src} alt={projects[slide].alt} />
         </Styled.image>
         <Styled.CaretLeft
+          aria-label="Projeto anterior"
           onClick={() =>
             setSlide(slide === 0 ? projects.length - 1 : slide - 1)
           }
@@ -21,6 +22,7 @@ export default function Carousel() {
           <CaretLeft size={32} />
         </Styled.CaretLeft>
         <Styled.CaretRight
+          aria-label="Próximo projeto"
           onClick={() => setSlide(slide == projects.length - 1 ? 0 : slide + 1)}
         >
           <CaretRight size={32} />

@@ -1,7 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 import 'jest-styled-components';
 import React from 'react';
-import { css } from 'styled-components';
 import { theme } from '../../styles/theme';
 import { renderTheme } from '../../utils/renderTheme';
 import Menu from './index';
@@ -21,15 +20,16 @@ describe('<Menu />', () => {
     });
   });
 
-  it('should render Menu', () => {
+  it('should open and close Menu', () => {
     renderTheme(<Menu />);
     const button = screen.getByLabelText('Abre/Fecha Menu');
+    const list = screen.getByLabelText('Abre Menu');
+    expect(list).toBeInTheDocument;
     const menuContent = button.nextSibling;
-    console.log(menuContent);
-    fireEvent.click(button);
+    fireEvent.click(list);
+    expect(menuContent).toHaveStyleRule('display', 'block');
+    const X = screen.getByLabelText('Fecha Menu');
+    fireEvent.click(X);
     expect(menuContent).toHaveStyleRule('display', 'none');
-    expect(menuContent).toHaveStyleRule('display', 'none', {
-      media: `(min-width:${theme.screen.size.medium})`,
-    });
   });
 });
