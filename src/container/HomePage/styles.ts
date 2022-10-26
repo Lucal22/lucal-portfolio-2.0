@@ -81,3 +81,10 @@ export const Media = styled.div`
     cursor: pointer;
   }
 `;
+
+export const Button = styled.button`
+border: none;
+background-color: transparent;
+color: white;
+cursor: pointer;
+`

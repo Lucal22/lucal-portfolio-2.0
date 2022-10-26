@@ -1,7 +1,7 @@
 import React from 'react';
 import Images from '../../../components/Images';
 import * as Styled from '../styles';
-import { techIcons, techIconsRight } from './mock';
+import { techIcons, techIconsRight } from './add';
 
 export default function Tech() {
   return (
@@ -15,13 +15,13 @@ export default function Tech() {
         <Styled.Tech>
           {techIcons.map((icons, index) => {
             return (
-              <Images
+              icons.image?<Images
                 key={index}
                 src={icons.image}
                 alt={icons.alt}
                 width={60}
                 height={60}
-              />
+              />:null
             );
           })}
         </Styled.Tech>
@@ -30,13 +30,13 @@ export default function Tech() {
         <Styled.Tech>
           {techIconsRight.map((icons, index) => {
             return (
-              <Images
+              icons.image?<Images
                 key={index}
                 src={icons.image}
                 alt={icons.alt}
                 width={60}
                 height={60}
-              />
+              />:null
             );
           })}
         </Styled.Tech>

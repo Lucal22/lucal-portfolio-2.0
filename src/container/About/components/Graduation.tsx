@@ -14,15 +14,15 @@ export default function Graduation() {
           <span>automação residencial</span> para o projeto de conclusão de
           curso.
         </p>
-        <Images src={images.arduino} alt="Arduino" width={150} height={150} />
+        {images.arduino?<Images src={images.arduino} alt="Arduino" width={150} height={150} />:null}
       </Styled.Paragraph>
       <Styled.Paragraph>
-        <Images
+        {images.engeletrica?<Images
           src={images.engeletrica}
           alt="Engenharia elétrica"
           width={150}
           height={150}
-        />
+        />:null}
         <p>
           Após concluir o curso técnico iniciei o curso de{' '}
           <span>Engenharia Elétrica,</span> que me mostrou outras maneiras de se
@@ -37,12 +37,12 @@ export default function Graduation() {
           <span>auxiliar de projetos elétricos</span> em uma empresa de
           desenvolvimento de projetos industriais.
         </p>
-        <Images
+        {images.autocad?<Images
           src={images.autocad}
           alt="Engenharia elétrica"
           width={150}
           height={150}
-        />
+        />:null}
       </Styled.Paragraph>
     </>
   );
