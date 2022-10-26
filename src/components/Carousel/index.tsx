@@ -2,16 +2,17 @@ import { CaretLeft, CaretRight } from 'phosphor-react';
 import React, { useState } from 'react';
 import Images from '../Images';
 import * as Styled from './styles';
-import projects from './mock';
+import projects from './projects';
 import Links from '../Links';
 
 export default function Carousel() {
   const [slide, setSlide] = useState(0);
+  const url = projects[slide].src;
   return (
     <Styled.Container>
       <Styled.Galery>
-        <Styled.image>
-          <Images src={projects[slide].src} alt={projects[slide].alt} />
+        <Styled.image >
+          { url?<Images  src={url} alt={projects[slide].alt} />:null}
         </Styled.image>
         <Styled.CaretLeft
           aria-label="Projeto anterior"
@@ -25,7 +26,7 @@ export default function Carousel() {
           aria-label="Próximo projeto"
           onClick={() => setSlide(slide == projects.length - 1 ? 0 : slide + 1)}
         >
-          <CaretRight size={32} />
+          <CaretRight id='direita' size={32} />
         </Styled.CaretRight>
       </Styled.Galery>
 

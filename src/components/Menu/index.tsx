@@ -4,10 +4,6 @@ import * as Styled from './styles';
 import list from '../Header/mock';
 import Links from '../Links';
 
-export type MenuProps = {
-  children: React.ReactNode;
-};
-
 export default function Menu() {
   const [menu, setMenu] = useState(false);
   return (
