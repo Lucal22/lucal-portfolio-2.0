@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   coverageDirectory: 'coverage',
   collectCoverageFrom: ['./src/**/*.ts(x)?'],
@@ -10,11 +8,14 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/public/'],
 
   setupFilesAfterEnv: ['<rootDir>/.jest/jest-setup.ts'],
-  modulePathIgnorePatterns: ['<rootDir>/src/styles/global-styles.ts','<rootDir>/src/pages/_app.tsx','<rootDir>/src/pages/_document.tsx'],
+  modulePathIgnorePatterns: [
+    '<rootDir>/src/styles/global-styles.ts',
+    '<rootDir>/src/pages/_app.tsx',
+    '<rootDir>/src/pages/_document.tsx',
+  ],
 
-    moduleNameMapper: {
-      '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-        '<rootDir>/src/assets/index.ts',
-    },
-
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/src/assets/index.ts',
+  },
 };
