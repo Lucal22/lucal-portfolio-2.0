@@ -11,8 +11,8 @@ export default function Carousel() {
   return (
     <Styled.Container>
       <Styled.Galery>
-        <Styled.image >
-          { url?<Images  src={url} alt={projects[slide].alt} />:null}
+        <Styled.image>
+          {url ? <Images src={url} alt={projects[slide].alt} /> : null}
         </Styled.image>
         <Styled.CaretLeft
           aria-label="Projeto anterior"
@@ -26,7 +26,7 @@ export default function Carousel() {
           aria-label="Próximo projeto"
           onClick={() => setSlide(slide == projects.length - 1 ? 0 : slide + 1)}
         >
-          <CaretRight id='direita' size={32} />
+          <CaretRight size={32} />
         </Styled.CaretRight>
       </Styled.Galery>
 

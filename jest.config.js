@@ -12,6 +12,9 @@ module.exports = {
     '<rootDir>/src/styles/global-styles.ts',
     '<rootDir>/src/pages/_app.tsx',
     '<rootDir>/src/pages/_document.tsx',
+    '<rootDir>/src/pages/index.tsx',
+    '<rootDir>/src/pages/projects/index.tsx',
+    '<rootDir>/src/pages/about/index.tsx',
   ],
 
   moduleNameMapper: {

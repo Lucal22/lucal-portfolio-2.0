@@ -22,7 +22,7 @@ export default function Images({
   return (
     <Links link={link}>
       <Image
-      placeholder='blur'
+        placeholder="blur"
         src={src}
         alt={alt}
         width={width}
