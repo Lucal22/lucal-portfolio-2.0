@@ -83,8 +83,8 @@ export const Media = styled.div`
 `;
 
 export const Button = styled.button`
-border: none;
-background-color: transparent;
-color: white;
-cursor: pointer;
-`
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+`;

@@ -14,7 +14,9 @@ export default function HomePage() {
         <Styled.Content>
           <Styled.Presentation>
             <figure>
-             {images.luis? <Images src={images.luis} alt={'Luis Carlos'} />:null}
+              {images.luis ? (
+                <Images src={images.luis} alt={'Luis Carlos'} />
+              ) : null}
             </figure>
             <Styled.Description>
               <h1>Luís Carlos Santos Silvestre</h1>
@@ -27,18 +29,15 @@ export default function HomePage() {
                   <LinkedinLogo size={32} weight="light" />
                 </Links>
                 <Styled.Button
-                aria-label = 'Copia email'
-                onClick={async () => {
-                  await navigator.clipboard.writeText(
-                    'luiscsilvestre22@gmail.com',
-                  );
-                  alert('Email copiado');
-                }}
+                  aria-label="Copia email"
+                  onClick={async () => {
+                    await navigator.clipboard.writeText(
+                      'luiscsilvestre22@gmail.com',
+                    );
+                    alert('Email copiado');
+                  }}
                 >
-                  <Envelope
-                    size={32}
-                    weight="light"
-                  />
+                  <Envelope size={32} weight="light" />
                 </Styled.Button>
                 <Links link="https://github.com/Lucal22" newTab={true}>
                   <IoLogoGithub size={32} />
