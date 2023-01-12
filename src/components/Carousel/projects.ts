@@ -13,6 +13,17 @@ const projects = [
     website: 'https://vercel.com/lucal22/portfolio-lucal',
   },
   {
+    src: images.agenda,
+    alt: 'Imagem da frontpage do projeto agenda',
+    title: 'Agenda de contatos (CRUD)',
+    description:
+      'Este projeto é uma page responsiva e mobile first, feita utilizando React.js e backend feito em Node.js com o intuito de fazer um projeto com todas as funcionalidades do CRUD.',
+    stack: 'React.js, Typescript, Node.js, Axios, Prisma e Styled Component',
+    libs: 'React icons, react forms, yup e jwt',
+    github: 'https://github.com/Lucal22/contact-frontend',
+    website: 'https://agenda-smoky.vercel.app/',
+  },
+  {
     src: images.keeper,
     alt: 'Imagem do keeper app',
     title: 'Keeper app',

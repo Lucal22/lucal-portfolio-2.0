@@ -29,9 +29,11 @@ import next from './images/next.png';
 import blog from './images/blog.png';
 import postgresql from './images/postgresql.png';
 import strapipage from './images/strapipage.png';
+import agenda from './images/agenda.png';
 
 export default {
   api,
+  agenda,
   strapipage,
   blog,
   postgresql,
