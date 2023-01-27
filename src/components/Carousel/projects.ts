@@ -21,7 +21,7 @@ const projects = [
     stack: 'React.js, Typescript, Node.js, Axios, Prisma e Styled Component',
     libs: 'React icons, react forms, yup e jwt',
     github: 'https://github.com/Lucal22/contact-frontend',
-    website: 'https://agenda-smoky.vercel.app/',
+    website: 'https://agenda-m2t9nzti6-lucal22.vercel.app/',
   },
   {
     src: images.keeper,
